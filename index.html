@@ -15,10 +15,35 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     <!-- responssive Navbar -->
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl"> Greenden</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
+
+
+        <button id="menu-btn" class="md:hidden block border-none text-lg px-3 py-1 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+
+        <div id="mobile-menu"
+            class="md:hidden absolute top-full right-0 rounded-lg p-3 mt-1 shadow-md origin-top duration-200 transition-transform scale-y-0 bg-white w-full z-50 hidden">
+            <a href="index.html" class="block px-4 py-2 hover:bg-gray-100">Home</a>
+            <a href="Prodects.html" class="block px-4 py-2 hover:bg-gray-100">Products</a>
+            <a href="contact.html" class="block px-4 py-2 hover:bg-gray-100">Contact</a>
+        </div>
+
+
+        <script>
+            const btn = document.getElementById('menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('scale-y-100');
+            });
+        </script>
+
+
+
 
         <ul class="flex gap-5 text-gray-700 hidden md:flex">
             <li>
@@ -97,25 +122,25 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         <h1 class="font-bold mt-5 text-3xl">Best Sellers</h1>
         <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-4 ">
             <div>
-                <img src="images/bestsell_1.png" class="inline hover:shadow-xl transform hover:translate-y-2"
+                <img src="images/bestsell_1.png" class="inline hover:shadow-xl transform hover:-translate-y-2"
                     alt="Anthurium plant">
                 <h1>Anthurium (Anthurium andraeanum)</h1>
                 <p>₹1200</p>
             </div>
             <div>
-                <img src="images/bestsell_2.png" class="inline hover:shadow-xl transform hover:translate-y-2"
+                <img src="images/bestsell_2.png" class="inline hover:shadow-xl transform hover:-translate-y-2"
                     alt="Money Tree plant">
                 <h1>Money Tree (Pachira aquatica)</h1>
                 <p>₹2500</p>
             </div>
             <div>
-                <img src="images/bestsell_3.png" class="inline hover:shadow-xl transform hover:translate-y-2    "
+                <img src="images/bestsell_3.png" class="inline hover:shadow-xl transform hover:-translate-y-2"
                     alt="Fiddle Leaf Fig plant">
                 <h1>Fiddle Leaf Fig (Ficus lyrata)</h1>
                 <p>₹3000</p>
             </div>
             <div>
-                <img src="images/bestsell_4.png" class="inline hover:shadow-xl transform hover:translate-y-2"
+                <img src="images/bestsell_4.png" class="inline hover:shadow-xl transform hover:-translate-y-2"
                     alt="Amaryllis plant">
                 <h1>Amaryllis (Hippeastrum)</h1>
                 <p>₹1800</p>
@@ -148,20 +173,22 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         </div>
     </section>
     <!-- news letter section -->
-     <section class="text-center">
+    <section class="text-center">
         <h1 class="text-3xl font-bold mt-5 text-center">Join our News letter</h1>
-        <p >sign up for our newsletter to receive the latest updates and offers.</p>
+        <p>sign up for our newsletter to receive the latest updates and offers.</p>
         <input type="text" class="border border-black p-2 m-3 " style="width: 80%;"><br>
         <button class="bg-black text-white p-3 m-1 underline">Subscribe</button>
 
-     </section>
-     <!-- footer -->
-      <section class="bg-green-100 p-10 flex flex-col gap-5">
+    </section>
+    <!-- footer -->
+    <section class="bg-green-100 p-10 flex flex-col gap-5">
         <h1 class="text-3xl font-bold">Greenden</h1>
-        <p>the standard for green living Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, molestias obcaecati. Assumenda ipsum vel aut aspernatur ratione, expedita consequuntur quam repudiandae, dolores deleniti, laudantium nulla ducimus odit! Architecto, consequuntur quidem?</p>
+        <p>the standard for green living Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, molestias
+            obcaecati. Assumenda ipsum vel aut aspernatur ratione, expedita consequuntur quam repudiandae, dolores
+            deleniti, laudantium nulla ducimus odit! Architecto, consequuntur quidem?</p>
         <p>@ 2025 Greenden.com</p>
 
-      </section>
+    </section>
 
 
 </body>
